@@ -3,10 +3,10 @@ package com.directoriotelefonico.dominio.modelo;
 import com.directoriotelefonico.dominio.excepcion.ExcepcionAtributo;
 public class Contacto {
 
-	private static final String ATRIBUTO_INVALIDO_OBLIGATORIO = "Campos teléfono y Nombre son requeridos";
-	private static final String TELEFONO_CONDICION_INVALIDO = "Telefono debe ser diferente de 5555555";
-	private static final String TELEFONO_LONGITUD_INVALIDO = "Longitud teléfono inválida (máx 7 números)";
-	private static final String NOMBRE_LONGITUD_INVALIDO = "Longitud nombre inválida (máx 100 caracteres)";
+	private static final String ATRIBUTO_INVALIDO_OBLIGATORIO = "Campos Teléfono y Nombre son requeridos";
+	private static final String TELEFONO_CONDICION_INVALIDO = "Teléfono debe ser diferente de 5555555";
+	private static final String TELEFONO_LONGITUD_INVALIDO = "Longitud télefono inválida (max 7 números)";
+	private static final String NOMBRE_LONGITUD_INVALIDO = "Longitud nombre inválida (max 100 caracteres)";
 
 	private Integer id;
 	private String nombre;

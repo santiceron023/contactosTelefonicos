@@ -3,6 +3,7 @@ package com.directoriotelefonico.infraestructura.controlador;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -34,14 +35,14 @@ public class ContactoRestController {
 	}
 
 
-	@GetMapping()
+	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
 	public List<Contacto> listarTodosContactos() {
 		return this.contactoListarManejador.ejecutar();
 	}
 	
 	
-	@PostMapping()
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void crearContacto(@RequestBody ContactoComando contactoComando) {
 		this.contactoCrearManejador.ejecutar(contactoComando);
