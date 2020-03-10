@@ -1,21 +1,30 @@
 # Directorio telefónico
-### Back End Api
+### Back End Java Api
 
 Administración de contactos telefónicos.
 
-## Características
+### Características
 * ***Arquitectura Hexagonal***
+* ***JDBC template con auto generación del esquema***
 
-* Erroes centralizados y se envía via rest con estándar
-* Test automatizados ( gradle test ) AAA , TestDataBuilder
+* Erroes centralizados con envío via rest con estándar
+* Test automatizados con patrón: AAA , TestDataBuilder
+* Rest buenas prácticas
+* Data binding en SQL
 * Reglas de negocio => 
 *tamaño numero = 7 digitos , nombre = 100 caracteres*
 *no se puede ingresar 5555555(7 size)*
 *no contactos con nombre repetido*
-* Rest buenas prácticas
-* Data binding en SQL
-* JDBC template con auto creación del esquema
 
+### Nota
+Por optimización el campo ***TELEFFONO*** es del tipo int en el API, para correcto funcionamiento usar máximo un número con 9 dígitos,
+se cumple la regla del negocio que es validar que máximo son 7. (se podría cambiar int por double en el comando)
+
+### Ejecución
+En la ejecución local tiene activado devTools para live reload. se recomienda ejecutar desde Eclipse, Spring Tool Suite o Intellij.
+
+Ejecutar pruebas
+```gradle test```
 
 ## Tecnologías
 

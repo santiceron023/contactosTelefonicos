@@ -1,11 +1,15 @@
 # Directorio Telefónico
 ### Full Stack App
 
-Administración de contactos telefónicos.
+Administración de contactos telefónicos. (Java + Angular).
 
-**Ingresar a los módulos, allí se encuentra la info de cada uno**
+## Ejecución
+Para los test de carga el archivo de configuración se llama **testsCargaApi.jmx** disponible en la raiz del proyecto
+
+**----> Ingresar a los módulos, allí se encuentra la info de cada uno <----**
 
 ## Características
+
 * ***Arquitectura Hexagonal***
 * ***Arquitectura feature-core-shared***
 * ***Test con patrón FIRST + AAA***
@@ -26,7 +30,7 @@ Administración de contactos telefónicos.
 
 ***Tests:*** Junit --- Mockito --- Protractor
 
-***Test Carga:*** Jmeter
+***Test Carga:*** Apache Jmeter
 
 ## Authors
 

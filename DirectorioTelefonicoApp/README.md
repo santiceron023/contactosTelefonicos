@@ -1,32 +1,40 @@
 # Directorio Telefónico
-### Front End App
+### Front End Web App
 
 Administración de contactos telefónicos.
 
-## Características
+### Características
 * ***Arquitectura feature-core-shared***
 * ***Lazy loading***
-* Erroes centralizados
+* Erroes centralizados (mediante interceptors)
 * Responsive
 * Angular material en español
+* Proxy reverso para evitar Cross Origin (protección AJAX)
+* Patrón Page Object en Test
 
 ### Configuracion
-para configurar el repositorio de ceiba como registry de node ejecutar el siguiente comando
-
+El repositorio tiene una dependencia de Ceiba Software, para usarla ejecutar
 ```npm config set @ceiba:registry=https://binary.ceiba.com.co/repository/temp-npm/```
+luego se puede ejecutar normalmente
+```npm install``
 
-## Tecnologías
+### Ejecución
+Lanzar servidor local 
+```ng serve```
+Ejecutar pruebas
+```ng e2e```
+
+### Nota
+Por optimización el campo ***TELEFFONO*** es del tipo int en el API, para correcto funcionamiento usar máximo un número con 9 dígitos,
+se cumple la regla del negocio que es validar que máximo son 7.
+
+### Tecnologías
 
 ***Dependencias:*** [Npm] (https://nodejs.org/es/)
 
 ***Frameworks:*** Angular v8.1.3 --- Angular material
 
-## Authors
-
-*   **Santiago Felipe Cerón Araujo** - [LinkedIn](https://www.linkedin.com/in/santiago-ceron-araujo)
-
-
-#### más: Estructura del proyecto
+### Más --> Estructura del proyecto
 
 Los archivos de la aplicación se encuentran en la subcarpeta src. Las pruebas iniciales correspondientes de extremo a extremo se encuentran en la subcarpeta e2e.
 
@@ -40,4 +48,10 @@ Deben estar los componentes que implementan funcionalidades especificas de la ap
 
 ##### Módulo shared
 Deben estar componentes o utilidades comunes a las diferentes feature. Por ejemplo, un componente de un botón azul que usted desea repetir en varios lugares. Un filtro para ser utilizado en todos los componentes.
+
+
+### Authors
+
+*   **Santiago Felipe Cerón Araujo** - [LinkedIn](https://www.linkedin.com/in/santiago-ceron-araujo)
+
 

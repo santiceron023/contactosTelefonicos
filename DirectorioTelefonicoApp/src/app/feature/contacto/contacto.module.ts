@@ -5,6 +5,7 @@ import { MaterialModule } from 'src/app/shared/material.module';
 import { ContactoCrearComponent } from './components/contacto/contacto-crear/contacto-crear.component';
 import { ContactoListarComponent } from './components/contacto/contacto-listar/contacto-listar.component';
 import { ContactoRoutingModule } from './contacto-routing.module';
+import { ContactoService } from './services/contacto/contacto.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,9 @@ import { ContactoRoutingModule } from './contacto-routing.module';
     ContactoRoutingModule,
     SharedModule,
     MaterialModule
+  ],
+  providers:[
+    ContactoService
   ]
 })
 export class ContactoModule { }

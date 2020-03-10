@@ -4,9 +4,7 @@ import { Contacto } from '../../shared/conctacto';
 import { environment } from 'src/environments/environment';
 import { BehaviorSubject } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ContactoService {
 
   recargar = new BehaviorSubject<boolean>(false);
