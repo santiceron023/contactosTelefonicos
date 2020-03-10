@@ -21,7 +21,7 @@ public class ContactoRepositorioMySQL implements ContactoRepositorio  {
 	@Override
 	public List<Contacto> listarTodos() {
 		return namedParameterJdbcTemplate.query(
-				"select * from contacto",
+				"SELECT id,nombre,telefono FROM contacto",
 				(rs, rowNum) ->
 				new Contacto(
 						rs.getInt("id"),
@@ -56,7 +56,7 @@ public class ContactoRepositorioMySQL implements ContactoRepositorio  {
 	public Contacto contactoPorId(Integer contactoId) {
 		MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource("id", contactoId);
 		List<Contacto> a = namedParameterJdbcTemplate.query(
-				"select * from contacto where id = :id",
+				"SELECT id,nombre,telefono FROM contacto where id = :id",
 				mapSqlParameterSource,
 				(rs, rowNum) ->
 				new Contacto(
@@ -72,7 +72,7 @@ public class ContactoRepositorioMySQL implements ContactoRepositorio  {
 	public Contacto contactoPorNombre(String nombre) {
 		MapSqlParameterSource mapSqlParameterSource = new MapSqlParameterSource("nombre", nombre);
 		List<Contacto> a = namedParameterJdbcTemplate.query(
-				"select * from contacto where nombre = :nombre",
+				"SELECT id,nombre,telefono FROM contacto where nombre = :nombre",
 				mapSqlParameterSource,
 				(rs, rowNum) ->
 				new Contacto(
