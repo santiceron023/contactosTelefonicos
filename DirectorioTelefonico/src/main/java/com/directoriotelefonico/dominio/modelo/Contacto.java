@@ -37,8 +37,6 @@ public class Contacto {
 		}	
 	}
 
-	public Contacto() {
-	}
 
 	private void validarTelefonoCondicionDiferente(Integer telefono) {
 		if(telefono == 5555555) {
