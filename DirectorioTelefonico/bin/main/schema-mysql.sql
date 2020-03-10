@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS contacto;
+
+CREATE TABLE contacto (
+  id INT NOT NULL AUTO_INCREMENT,
+  nombre VARCHAR(100) NOT NULL,
+  telefono INT(7) NOT NULL,
+  CONSTRAINT contacto_pk PRIMARY KEY (id)
+);
